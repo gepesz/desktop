@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application PUBLIC "-//Sun Microsystems, Inc.//DTD J2EE Application 1.3//EN" "http://java.sun.com/dtd/application_1_3.dtd">
+<application id="Application_ID">
+	<display-name>DefaultEAR</display-name>
+	<module id="WebModule_1116093548887">
+		<web>
+			<web-uri>LockerWAR.war</web-uri>
+			<context-root>LockerWAR</context-root>
+		</web>
+	</module>
+	<module id="EjbModule_1116094725298">
+		<ejb>LockerEJB.jar</ejb>
+	</module>
+</application>

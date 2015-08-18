@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejbext:EJBJarExtension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ejbext="ejbext.xmi" xmlns:ejb="ejb.xmi" xmi:id="EJBJarExtension_1060099908381">
+  <ejbJar href="META-INF/ejb-jar.xml#ejb-jar_ID"/>
+  <appliedAccessIntents xmi:id="AppliedAccessIntent_1077825106961" name="finders" description="" accessIntentName="wsOptimisticRead">
+    <methodElements xmi:id="MethodElement_1077825106971" name="findAll" parms="" type="LocalHome">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Budapest"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1077825106972" name="findByPrimaryKey" parms="java.lang.Integer" type="LocalHome">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Budapest"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1077825106973" name="findAll" parms="" type="LocalHome">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Telephone"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1077825106974" name="findByPrimaryKey" parms="java.lang.Integer" type="LocalHome">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Telephone"/>
+    </methodElements>
+    <methodElements xmi:id="MethodElement_1077825106975" name="findByUser" parms="java.lang.Integer" type="LocalHome">
+      <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Telephone"/>
+    </methodElements>
+  </appliedAccessIntents>
+</ejbext:EJBJarExtension>

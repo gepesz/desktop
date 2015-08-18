@@ -1,0 +1,74 @@
+
+IBM WebSphere Studio Application Developer 5.1
+How to create an EJB?
+
+Created by,
+12/03/03    Peter Szocs
+
+
+CREATE NEW EJB:
+===============
+
+1) Right click EJB Jar --> New EJB.
+2) Add the fields with their types to the new EJB.
+3) Make sure to select the checkbox next to the key field(s)!!
+4) Open up ejb-jar.xml.  Goto the Beans tab, and enter the datasource's JNDI name for this new EJB.
+5) Add any relationships and finders to this new EJB on the Beans tab.
+
+6) Now the EJB is added with all its relationships and finders.  Write the methods you want: 
+   ejbCreate, ejbPostCreate, update etc.  Modify the home and local interfaces accordingly.
+7) When the EJB is complete, copy-paste local interface into a new ibean, and make sure the 
+   local interface implements the ibean.
+8) Add the JNDI name and Tablename of your new EJB to Contants.java.  Put the new table to
+   AuditManager's hashMap.  Save everything you've done so far.
+
+9) Go back to the ejb-jar.xml, and on the Access tab modify the access intent of your new finders.
+10) Run jarup.bat to recreate appian-proc-util.jar under EJB module.  Refresh the 
+    EAR module: You should see the EJB module with NO JAVA ERRORS at this point (only
+    database mapping problems).
+
+11) Now it's time for the mapping.  The best way to do it is to first delete the folder called 
+    'backends' under the EJB module by Right click --> Delete.  This should clear all errors 
+    seen previously on the Task bar.  Now, right click on the EJB module --> Generate --> 
+    EJB to RDB mapping.  It'll ask you to create a new Top Down mapping, say yes.  
+    Select Oracle 8.1.7 for your database type.  Type 'WB' instead of 'SAMPLE' for
+    Database name.  Click OK.
+12) All table.xmi-s have been regenerated.  Now you'll have to manually modify a couple of them.  
+    The ones that need change are:
+	- RELNotifMethodSR
+	- InvitedFirms
+	- RelCriteriaProposal
+	- RelSubcriteriaProposal
+	- [ rename User_DocType --> FILEPERM ]
+	- FileVersion
+	- SoleSource
+  - SRCandidate
+  - Notif
+
+    All of these need foreign key change.  Right click on the xmi in the Mapping view --> 
+    Open Table editor.  Goto the foreign key tab, and move the foreign keys to the fields 
+    which should hold the foreign key values.  Then, goto the columns tab, and delete all 
+    columns (previous foreign key cols) no longer needed.  Remember that you'll have to do 
+    this for each of the above EJBs (plus rename one)!!
+
+13) Open up web.xml.  Goto the References tab, and on the Local Refs sub-tab click Add.  Name your 
+    new local ejb ref the same way as before: ejb/HOMENAME.  Select your new ejb at the right for 
+    this new reference.
+
+14) Write the service methods for your new ejb.  Remember that you'll need to add a new private 
+    getHOMENAME() for this new EJB as well as a new private variable on top of your service to 
+    hold your home interface.  Also, modify StartupServlet and add this EJB to be cached at
+    application startup.
+
+15) You're basically done at this point, except that you'll have to create the new 
+    table & sequence in Oracle.  So go ahead and modify Table.ddl, Sequence.ddl and dml_data.ddl 
+    to actually create the new Table.  Test yourself in Toad locally first.
+
+16) Redeploy EJBs: Right click on EJB module --> Generate --> Deploy and RMIC code...  
+    Wait, wait and wait...
+
+17) CONGRATULATIONS!!
+
+
+
+-----------------------------------------------------------------------------------------

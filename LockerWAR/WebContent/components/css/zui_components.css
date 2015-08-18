@@ -1,0 +1,174 @@
+/**
+ * Component style sheet.
+ * This css files controls the look and feel of all JS components.
+ */
+
+/* New Filter */
+.zuiFilterIframe {
+	position: absolute;
+	height: 100%;
+	filter: alpha(Opacity: 0);
+	-moz-opacity:0;
+	opacity:0;
+}
+.zuiFilterDiv{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	filter:alpha(opacity=40);
+	-moz-opacity: .40;
+	background-color:#9999AA;
+}
+.zuiClickFilterDiv{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	filter:alpha(opacity=70);
+	-moz-opacity: .10;
+	background-color:red;
+}
+
+/* DropDown */
+.zuiDropDown {
+	background-color:#4C4C4C;
+	color:#FFFFFF;
+	text-decoration:none;
+	border: 1px solid #4C4C4C;
+	font-size: 12px;
+	display: none;
+	position: absolute;
+	z-index: 25;
+	filter:alpha(opacity=90);
+	-moz-opacity: .90;
+}
+
+.zuiDropDown li {
+	padding-left: 10px;
+	width: 135px;
+}
+
+.zuiDropDown li.hr {
+    padding-left: 5px;
+}
+
+.zuiDropDown li.hover {
+	cursor: pointer;
+	width: 135px;
+	background-color:#EE9F1B;
+	color:#4C4C4C;
+	text-decoration:none;
+}
+
+/* Picker, Dialog, Alert, Confirm */
+ 
+.zuiDialog{
+	font-family:verdana;
+	font-size:12px;
+	color:#333333;
+	background-color: #E7E7CF;
+	text-align: left;
+	min-height: 150px;
+	width: 400px;
+	position: absolute;
+	z-index: 100;
+	border: 1px solid #82919c;
+	padding: 1px;
+}
+.zuiDialogMove{
+	font-family:verdana;
+	font-size:12px;
+	color:#333333;
+	background-color: #E7E7CF;
+	text-align: left;
+	min-height: 150px;
+	width: 400px;
+	position: absolute;
+	z-index: 100;
+	border: 1px solid #82919c;
+	padding: 1px;
+	filter:alpha(opacity=70);
+	-moz-opacity: .70;
+}
+.zuiDialog .h1Controls, .zuiDialogMove .h1Controls{
+	position: absolute;
+	top: 4px;
+	right: 4px;
+}
+.zuiDialog .h1Controls a, .zuiDialogMove .h1Controls a{
+	float: right;
+}
+.zuiDialog h1, .zuiDialogMove h1{
+	font-family:verdana;
+	font-size:13px;
+	color:#999999;
+	background: #787922;
+	height:18px;
+    border: 1px solid white;
+	padding: 0 10px;
+	margin: 0 0 10px;
+	cursor: move;
+}
+.zuiDialogArea{
+	font-family:verdana;
+	font-size:12px;
+	width:250px;
+	color:#333333;
+	background: white;
+}
+.zuiDialogItem{
+	font-family:verdana;
+	font-size:12px;
+	color:#3B517E;
+	background: #E7E7CF;
+	height: 25px;
+	text-align: right;
+	border-right-width: 1px;
+	border-right-style: dashed;
+	border-right-color: #E7E7CF;
+}
+.zuiDialogButton{
+	margin: 20px 20px;
+	font-family:verdana;
+	font-size:12px;
+	color:#333333;
+	background-color: #E0E25C;
+	border: 1px solid #333333;
+	width: 120px;
+	text-align: center;
+}
+.zuiAlertText{
+    text-align: center;
+	font-family:tahoma;
+	font-size:14px;
+	font-weight: bold;
+	padding: 1em 0 0 0;
+}
+.zuiDialog p.center, .zuiDialogMove p.center{
+	text-align: center;
+}
+.zuiDialog p.centerLine, .zuiDialogMove p.centerLine{
+	border-top: 1px solid white;
+	text-align: center;
+}
+
+/* Tooltip */
+
+#zuiToolTip {
+  position: absolute;
+  left: -300px;
+  width: 150px;
+  border: 1px solid black;
+  padding: 2px;
+  background-color: lightyellow;
+  display: none;
+  z-index: 100;
+  /*Remove below line to remove shadow. Below line should always appear last within this CSS*/
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
+}
+
+#zuiToolTipImg {
+  position:absolute;
+  left: -300px;
+  z-index: 101;
+  display: none;
+}

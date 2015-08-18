@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<!-- Form Beans -->
+	<form-beans>
+
+		<form-bean name="gridForm"     type="com.vh.locker.bean.inside.GridForm" />
+		<form-bean name="shortcutForm" type="com.vh.locker.bean.inside.ShortcutForm" />
+		
+	</form-beans>
+
+
+	<!-- Global Forwards -->
+	<global-forwards>
+		<forward name="/outside/SSODetect"  path="/outside/SSODetect.do"/>
+		<forward name="error"               path="/common/jsp/error.jsp"/>
+		<forward name="logout"              path="/outside/Logout.do"/>
+	</global-forwards>
+
+	<!-- Action Mappings -->
+	<action-mappings>
+		<!--**************** Start inside MAJOR actions ****************-->
+
+		<!-- Blank Action -->
+		<action  path="/common/BlankAction" 
+                 type="com.vh.locker.action.inside.BlankAction">
+		  <forward name="success" path="/common/jsp/desktop.jsp"/>
+		</action>
+
+		<!-- SaveNewShortcut: called when creating a new shortcut on the desktop -->		
+		<action  path="/common/CreateShortcut" 
+                 name="shortcutForm"
+                scope="request"
+                 type="com.vh.locker.action.inside.CreateShortcut">		
+		  <forward name="success" path="/common/jsp/desktop.jsp"/>
+		</action>
+
+		<!-- View Action for Settings -->		
+		<action  path="/common/ViewSettings" 
+                 name="signupForm"
+                scope="request"
+                 type="com.vh.locker.action.inside.ViewSettings">		
+		  <forward name="success" path="/common/jsp/settings.jsp"/>
+		</action>
+
+		<!-- View Action for Settings->Profile -->	
+		<action  path="/common/ViewProfile" 
+             type="com.vh.locker.action.inside.ViewProfile">		
+		  <forward name="success" path="/common/jsp/profile.jsp"/>
+		</action>
+
+		<!-- View Action for Settings->Account -->	
+		<action  path="/common/ViewAccount" 
+             type="com.vh.locker.action.inside.ViewAccount">		
+		  <forward name="success" path="/common/jsp/account.jsp"/>
+		</action>
+
+		<!-- View Action for Settings->Style -->	
+		<action  path="/common/ViewStyle" 
+             type="com.vh.locker.action.inside.ViewStyle">		
+		  <forward name="success" path="/common/jsp/style.jsp"/>
+		</action>
+
+		<!-- Save Action for Settings -->		
+		<action  path="/common/SaveSettings" 
+             name="signupForm"
+            scope="request"
+             type="com.vh.locker.action.inside.SaveSettings">		
+		  <forward name="success" path="/common/jsp/desktop.jsp"/>
+		</action>
+
+		<!--**************** End inside MAJOR actions ****************-->
+	</action-mappings>
+
+
+	<!-- Controller -->
+	<controller debug="2" locale="true"/>
+
+	<!-- Message Resources -->
+	<message-resources parameter="com.vh.locker.resources.application" key="resources"/>
+	<message-resources parameter="com.vh.locker.resources.images"      key="images"/>
+
+	<!-- Validator Plugin
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,
+                                                  /WEB-INF/validation.xml"/>
+	</plug-in>
+	     Add multiple validator resource files by setting the pathnames property 
+		 with a comma delimitted list of resource files to load. 
+    -->
+
+</struts-config>

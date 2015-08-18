@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+
+	<!-- Form Beans -->
+	<form-beans>
+
+		<form-bean name="uploadSongForm" type="com.vh.locker.bean.inside.UploadSongForm" />
+		<form-bean name="songForm" type="com.vh.locker.bean.inside.SongForm" />
+		<form-bean name="mixForm" type="com.vh.locker.bean.inside.MixForm" />
+
+	</form-beans>
+
+
+	<!-- Action Mappings -->
+	<action-mappings>
+		<!--**************** Start MUSIC actions ****************-->
+
+    <!-- Start Action for music -->		
+    <action  path="/music/StartMusic" 
+             type="com.vh.locker.action.inside.StartMusic">
+		  <forward name="success" path="/modules/music/jsp/startmusic.jsp"/>
+		</action>
+
+    <!-- Dispatcher action for music -->
+		<action  path="/music/MusicDispatcher" 
+             name="gridForm"
+            scope="request"
+             type="com.vh.locker.action.inside.MusicDispatcher">		
+		  <forward name="failure" path="/music/ViewTracks.bg?c=grid"/>
+		</action>
+
+    <!-- Action for playing mp3 files -->
+    <action  path="/music/PlayMusic" 
+             name="gridForm"
+            scope="request"
+             type="com.vh.locker.action.inside.PlayMusic">		
+		  <forward name="success" path="/modules/music/jsp/tracks.jsp"/>
+    </action>
+
+    <!-- Action for playing mp3 albums -->
+    <action  path="/music/PlayAlbum" 
+             name="gridForm"
+            scope="request"
+             type="com.vh.locker.action.inside.PlayAlbum">		
+		  <forward name="success" path="/music/ViewAlbums.do"/>
+    </action>
+
+    <!-- Action for playing mp3s of artists -->
+    <action  path="/music/PlayArtist" 
+             name="gridForm"
+            scope="request"
+             type="com.vh.locker.action.inside.PlayArtist">
+		  <forward name="success" path="/music/ViewArtists.do"/>
+    </action>
+
+    <!-- Action for playing mp3s of given genre -->
+    <action  path="/music/PlayGenre" 
+             name="gridForm"
+            scope="request"
+             type="com.vh.locker.action.inside.PlayGenre">
+		  <forward name="success" path="/music/ViewGenres.do"/>
+    </action>
+
+    <!-- Action for playing mp3 mix -->
+    <action  path="/music/PlayMix" 
+             name="gridForm"
+            scope="request"
+             type="com.vh.locker.action.inside.PlayMix">
+		  <forward name="success" path="/music/ViewMixes.do"/>
+    </action>
+
+    <!-- Action for deleting mp3 files -->
+    <action  path="/music/DeleteMusic" 
+             name="gridForm"
+            scope="request"
+             type="com.vh.locker.action.inside.DeleteMusic">
+		  <forward name="success" path="/modules/music/jsp/tracks.jsp"/>
+    </action>
+
+    <!-- Action for deleting mp3 albums -->
+    <action  path="/music/DeleteAlbum" 
+             name="gridForm"
+            scope="request"
+             type="com.vh.locker.action.inside.DeleteAlbum">		
+		  <forward name="success" path="/music/ViewAlbums.do"/>
+    </action>
+
+    <!-- Action for deleting mp3 albums -->
+    <action  path="/music/DeleteArtist" 
+             name="gridForm"
+            scope="request"
+             type="com.vh.locker.action.inside.DeleteArtist">
+		  <forward name="success" path="/music/ViewArtists.do"/>
+    </action>
+
+    <!-- Action for deleting mp3 genre -->
+    <action  path="/music/DeleteGenre" 
+             name="gridForm"
+            scope="request"
+             type="com.vh.locker.action.inside.DeleteGenre">		
+		  <forward name="success" path="/music/ViewGenres.do"/>
+    </action>
+
+    <!-- Action for deleting mp3 mix -->
+    <action  path="/music/DeleteMix" 
+             name="gridForm"
+            scope="request"
+             type="com.vh.locker.action.inside.DeleteMix">
+		  <forward name="success" path="/music/ViewMixes.do"/>
+    </action>
+
+    <!-- Action for uploading mp3 files -->
+    <action  path="/music/UploadMusic" 
+             name="uploadSongForm"
+            scope="request"
+             type="com.vh.locker.action.inside.UploadMusic">
+		  <forward name="failure" path="/modules/music/jsp/tracks.jsp"/>
+		  <forward name="success" path="/modules/music/jsp/tracks.jsp"/>
+    </action>
+
+    <!-- Action for downloading mp3 files -->
+    <action  path="/music/DownloadMusic" 
+             name="gridForm"
+            scope="request"
+             type="com.vh.locker.action.inside.DownloadMusic">
+		  <forward name="failure" path="/modules/music/jsp/tracks.jsp"/>
+		  <forward name="success" path="/modules/music/jsp/tracks.jsp"/>
+    </action>
+
+    <!-- Action for creating music mixes files -->
+    <action  path="/music/CreateMix" 
+             name="mixForm"
+            scope="request"
+             type="com.vh.locker.action.inside.CreateMix">
+		  <forward name="success" path="/modules/music/jsp/tracks.jsp"/>
+    </action>
+
+    <!-- Save Action for update song -->		
+    <action  path="/music/UpdateSong" 
+             name="songForm"
+            scope="request"
+             type="com.vh.locker.action.inside.UpdateSong">
+		  <forward name="success" path="/modules/music/jsp/tracks.jsp"/>
+    </action>
+
+    <!-- View Action for artists -->		
+    <action  path="/music/ViewArtists"
+             type="com.vh.locker.action.inside.ViewArtists">
+		  <forward name="success" path="/modules/music/jsp/artists.jsp"/>
+    </action>
+
+    <!-- View Action for albums -->		
+    <action  path="/music/ViewAlbums" 
+             type="com.vh.locker.action.inside.ViewAlbums">
+		  <forward name="success" path="/modules/music/jsp/albums.jsp"/>
+    </action>
+
+    <!-- View Action for genres -->		
+    <action  path="/music/ViewGenres" 
+             type="com.vh.locker.action.inside.ViewGenres">
+		  <forward name="success" path="/modules/music/jsp/genres.jsp"/>
+    </action>
+
+    <!-- View Action for mixes -->		
+    <action  path="/music/ViewMixes" 
+             type="com.vh.locker.action.inside.ViewMixes">
+		  <forward name="success" path="/modules/music/jsp/mixes.jsp"/>
+    </action>
+
+    <!-- View Action for tracks -->
+    <action  path="/music/ViewTracks" 
+             type="com.vh.locker.action.inside.ViewTracks">
+		  <forward name="success" path="/modules/music/jsp/tracks.jsp"/>
+    </action>
+
+		<!--**************** End start actions ****************-->
+	</action-mappings>
+
+</struts-config>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE weblogic-rdbms-jar PUBLIC "-//BEA Systems, Inc.//DTD WebLogic 7.0.0 EJB RDBMS Persistence//EN" "http://www.bea.com/servers/wls700/dtd/weblogic-rdbms20-persistence-700.dtd">
+<weblogic-rdbms-jar>
+    <weblogic-rdbms-bean>
+        <ejb-name>Budapest</ejb-name>
+        <data-source-name>jdbc/AppianDataSource</data-source-name>
+        <table-map>
+            <table-name>BUDAPEST</table-name>
+            <field-map>
+                <cmp-field>id</cmp-field>
+                <dbms-column>ID</dbms-column>
+            </field-map>
+            <field-map>
+                <cmp-field>firstName</cmp-field>
+                <dbms-column>FIRSTNAME</dbms-column>
+            </field-map>
+            <field-map>
+                <cmp-field>lastName</cmp-field>
+                <dbms-column>LASTNAME</dbms-column>
+            </field-map>
+            <field-map>
+                <cmp-field>age</cmp-field>
+                <dbms-column>AGE</dbms-column>
+            </field-map>
+        </table-map>
+    </weblogic-rdbms-bean>
+    <weblogic-rdbms-bean>
+        <ejb-name>Telephone</ejb-name>
+        <data-source-name>jdbc/AppianDataSource</data-source-name>
+        <table-map>
+            <table-name>TELEPHONE</table-name>
+            <field-map>
+                <cmp-field>id</cmp-field>
+                <dbms-column>ID</dbms-column>
+            </field-map>
+            <field-map>
+                <cmp-field>desc</cmp-field>
+                <dbms-column>DESC1</dbms-column>
+            </field-map>
+            <field-map>
+                <cmp-field>number</cmp-field>
+                <dbms-column>NUMBER1</dbms-column>
+            </field-map>
+        </table-map>
+    </weblogic-rdbms-bean>
+    <weblogic-rdbms-relation>
+        <relation-name>Telephone-Budapest</relation-name>
+        <weblogic-relationship-role>
+            <relationship-role-name>budapest</relationship-role-name>
+            <relationship-role-map>
+                <column-map>
+                    <foreign-key-column>BUDAPEST_ID</foreign-key-column>
+                    <key-column>ID</key-column>
+                </column-map>
+            </relationship-role-map>
+        </weblogic-relationship-role>
+        <weblogic-relationship-role>
+            <relationship-role-name>telephone</relationship-role-name>
+        </weblogic-relationship-role>
+    </weblogic-rdbms-relation>
+</weblogic-rdbms-jar>
+

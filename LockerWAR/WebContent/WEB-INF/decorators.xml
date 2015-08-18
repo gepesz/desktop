@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<decorators defaultdir="/common/jsp/decorators">
+  <excludes>
+    <pattern>/common/jsp/*</pattern>
+    <pattern>/outside/jcaptcha.*</pattern>
+  </excludes>
+
+  <decorator name="outside" page="base_outside.jsp">
+    <pattern>/outside/SelectLocale.do</pattern>
+    <pattern>/outside/Logout.do</pattern>
+  </decorator>
+
+  <decorator name="inside" page="base_inside.jsp">
+    <pattern>*.do</pattern>
+  </decorator>
+
+  <decorator name="bg" page="bg.jsp">
+    <pattern>*.bg</pattern>
+  </decorator>
+
+  <decorator name="none" page="none.jsp">
+    <pattern>*.none</pattern>
+    <pattern>*.sys</pattern>
+  </decorator>
+
+</decorators>

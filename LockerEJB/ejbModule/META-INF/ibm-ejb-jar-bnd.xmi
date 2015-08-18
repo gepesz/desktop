@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejbbnd:EJBJarBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ejbbnd="ejbbnd.xmi" xmlns:ejb="ejb.xmi" xmlns:common="common.xmi" xmi:id="EJBJarBinding_1057937583098" currentBackendId="ORACLE_V9_1">
+  <ejbJar href="META-INF/ejb-jar.xml#ejb-jar_ID"/>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1093458191250" jndiName="com/vh/locker/ejb/UserHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#User"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093469853804" jndiName="ejb/CountryHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093469853804"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093469853805" jndiName="ejb/LanguageHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093469853805"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093469853820" jndiName="ejb/SecretQuestionHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093469853820"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093473894018" jndiName="ejb/MusicFileHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093473894018"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1094407096729" jndiName="ejb/UserStatusHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1094407096729"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1094407096779" jndiName="ejb/UserTypeHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1094407096779"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1099765797430" jndiName="ejb/GenreHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1099765797430"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1100059587639" jndiName="ejb/AlbumHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1100059587639"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1100059696836" jndiName="ejb/ArtistHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1100059696836"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1109525907528" jndiName="ejb/ContactHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1109525907528"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1114970137156" jndiName="com/vh/locker/ejb/PhotoAlbumHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1114970137156"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1125399296934" jndiName="com/vh/locker/ejb/ShortCutHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1125399296934"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1133717806886" jndiName="com/vh/locker/ejb/PhotoHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1133717806886"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1134329163581" jndiName="com/vh/locker/ejb/SkinHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1134329163581"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1093469646838" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1093458483090" jndiName="com/vh/locker/ejb/CountryHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Country"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093469853821" jndiName="ejb/UserHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093469853821"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1093469646839" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1093462258604" jndiName="com/vh/locker/ejb/LanguageHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Language"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093469853822" jndiName="ejb/UserHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093469853822"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1093469646840" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1093462382884" jndiName="com/vh/locker/ejb/SecretQuestionHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#SecretQuestion"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093469853823" jndiName="ejb/UserHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093469853823"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1093469646841" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1093473210417" jndiName="com/vh/locker/ejb/FileTypeHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#FileType"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093473647084" jndiName="ejb/MusicFileHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093473647084"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1093473915768" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1093473210418" jndiName="com/vh/locker/ejb/MusicFileHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#MusicFile"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093473647099" jndiName="ejb/FileTypeHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093473647099"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093473894034" jndiName="ejb/UserHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093473894034"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093474212998" jndiName="ejb/GenreHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093474212998"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093476603772" jndiName="ejb/RelMusicMixesHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093476603772"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1100062952267" jndiName="ejb/AlbumHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1100062952267"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1100062952337" jndiName="ejb/ArtistHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1100062952348"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1093473915769" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1093474154124" jndiName="com/vh/locker/ejb/GenreHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Genre"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093474212999" jndiName="ejb/MusicFileHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093474212999"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093475072847" jndiName="ejb/MixesHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093475072847"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1099765797490" jndiName="ejb/UserHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1099765797490"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1093714099415" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1093474614352" jndiName="com/vh/locker/ejb/MixesHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Mixes"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093475072848" jndiName="ejb/GenreHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093475072848"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093476603788" jndiName="ejb/RelMusicMixesHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093476603788"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1093475072847" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1093476339025" jndiName="com/vh/locker/ejb/RelMusicMixesHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#RelMusicMixes"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093476603789" jndiName="ejb/MixesHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093476603789"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1093476603790" jndiName="ejb/MusicFileHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1093476603790"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1093714099416" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1094406745775" jndiName="com/vh/locker/ejb/UserTypeHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#UserType"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1094407096799" jndiName="ejb/UserHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1094407096799"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1094406745775" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1094406745776" jndiName="com/vh/locker/ejb/UserStatusHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#UserStatus"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1094407096819" jndiName="ejb/UserHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1094407096819"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1094406745776" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1100059587719" jndiName="com/vh/locker/ejb/AlbumHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Album"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1100059587719" jndiName="ejb/UserHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1100059587719"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1100062952368" jndiName="ejb/MusicFileHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1100062952368"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1100064971801" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1100059696906" jndiName="com/vh/locker/ejb/ArtistHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Artist"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1100059696906" jndiName="ejb/UserHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1100059696906"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1100062952388" jndiName="ejb/MusicFileHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1100062952388"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1100064971802" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1109525907608" jndiName="com/vh/locker/ejb/ContactHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Contact"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1109525907608" jndiName="ejb/UserHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1109525907608"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1109525907638" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1114970137236" jndiName="com/vh/locker/ejb/PhotoAlbumHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#PhotoAlbum"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1114970137236" jndiName="com/vh/locker/ejb/UserHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1114970137236"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1114971557308" jndiName="com/vh/locker/ejb/RelPhotoAlbumHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1114971557308"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1114970137256" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1114971557328" jndiName="com/vh/locker/ejb/PhotoHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Photo"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1114971557328" jndiName="com/vh/locker/ejb/RelPhotoAlbumHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1114971557328"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1133717807126" jndiName="com/vh/locker/ejb/UserHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1133717807126"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1114971557358" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1114971557358" jndiName="com/vh/locker/ejb/RelPhotoAlbumHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#RelPhotoAlbum"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1114971557358" jndiName="com/vh/locker/ejb/PhotoHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1114971557358"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1114971557378" jndiName="com/vh/locker/ejb/PhotoAlbumHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1114971557378"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1114971557408" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1125398890149" jndiName="com/vh/locker/ejb/ApplicationHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Application"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1125399297144" jndiName="com/vh/locker/ejb/ShortCutHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1125399297144"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1125398890149" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1125399062917" jndiName="com/vh/locker/ejb/ShortCutHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#ShortCut"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1125399297164" jndiName="com/vh/locker/ejb/ApplicationHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1125399297164"/>
+    </ejbRefBindings>
+    <ejbRefBindings xmi:id="EjbRefBinding_1125399297254" jndiName="com/vh/locker/ejb/UserHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1125399297254"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1125399062917" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <ejbBindings xmi:id="EnterpriseBeanBinding_1134329163741" jndiName="com/vh/locker/ejb/SkinHome">
+    <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Skin"/>
+    <ejbRefBindings xmi:id="EjbRefBinding_1134329163741" jndiName="com/vh/locker/ejb/UserHome">
+      <bindingEjbRef xmi:type="common:EJBLocalRef" href="META-INF/ejb-jar.xml#EJBLocalRef_1134329163741"/>
+    </ejbRefBindings>
+    <cmpConnectionFactory xmi:id="CMPConnectionFactoryBinding_1134329163781" jndiName="jdbc/LockerDS" resAuth="Container"/>
+  </ejbBindings>
+  <defaultCMPConnectionFactory xmi:id="CMPConnectionFactoryBinding_1093458191250" jndiName="jdbc/Default" resAuth="Per_Connection_Factory"/>
+</ejbbnd:EJBJarBinding>

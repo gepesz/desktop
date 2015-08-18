@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project [
+  <!ENTITY properties SYSTEM "file:properties.xml">
+]>
+
+<project name="tomcat precompile" default="jspc" basedir=".">
+  <property environment="env"/>
+  <property name="java.home"            location="${env.JAVA_HOME}" />
+  <property name="tomcat.home"          location="${env.CATALINA_HOME}"/>
+  <property name="webapp.home"          location="${basedir}/../LockerWAR/" />
+  <property name="webapp.name"          value="WebContent" />
+  <property name="webapp.path"          location="${webapp.home}/${webapp.name}"/>
+  <property name="webapp.web.inf"       location="${webapp.path}/WEB-INF" />
+  <property name="err.log.file"         location="jspc.err" />
+
+  <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+  
+  <target name="jspc">
+    <taskdef classname="org.apache.jasper.JspC" name="jasper2" >
+      <classpath id="jspc.classpath">
+        <pathelement location="${java.home}/../lib/tools.jar"/>
+        <fileset dir="${tomcat.home}/server/lib">
+          <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${tomcat.home}/common/lib">
+          <include name="*.jar"/>
+        </fileset>
+      </classpath>
+    </taskdef>
+
+
+    <!-- bills -->
+    <for param="jsp-path">
+      <path>
+        <fileset dir="${webapp.path}">
+          <include name="**/modules/bills/**/*.jsp" />
+        </fileset>
+      </path>
+      <sequential>
+        <echo message="Parsing @{jsp-path}" />
+        <trycatch property="parse.failure">
+          <try>
+            <jasper2
+             validateXml="true"
+             uriroot="${webapp.path}"
+             webXmlFragment="${webapp.web.inf}/generated_web.xml"
+             outputDir="${webapp.web.inf}/src"
+             poolingEnabled="true">
+            </jasper2>
+          </try>
+          <catch>
+              <echo file="${err.log.file}" append="true" level="error">
+ERROR: @{jsp-path}: ${parse.failure}
+              </echo>
+          </catch>
+        </trycatch>
+      </sequential>
+    </for>
+  </target>
+
+
+  <target name="compile">
+    <javac destdir="${webapp.web.inf}/classes"
+           optimize="off"
+           debug="on"
+           failonerror="false"
+           srcdir="${webapp.web.inf}/src"
+           fork="true"
+           memoryMaximumSize="1024m"
+           >
+      <classpath>
+        <pathelement location="${webapp.web.inf}/classes"/>
+        <fileset dir="${webapp.web.inf}/lib">
+          <include name="*.jar"/>
+        </fileset>
+        <pathelement location="${tomcat.home}/common/classes"/>
+        <fileset dir="${tomcat.home}/common/lib">
+          <include name="*.jar"/>
+        </fileset>
+        <pathelement location="${tomcat.home}/shared/classes"/>
+        <fileset dir="${tomcat.home}/shared/lib">
+          <include name="*.jar"/>
+        </fileset>
+      </classpath>
+      <include name="**/*.java" />
+      <exclude name="**/svy/**"/>
+    </javac>
+  </target>
+
+  <target name="clean">
+    <delete dir="${webapp.web.inf}/src" />
+  </target>
+</project>
+

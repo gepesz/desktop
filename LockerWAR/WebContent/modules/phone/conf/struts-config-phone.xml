@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<!-- Form Beans -->
+	<form-beans>
+
+		<form-bean name="contactForm" type="com.vh.locker.bean.inside.ContactForm" />
+		<form-bean name="smsForm"     type="com.vh.locker.bean.inside.SmsForm" />
+
+	</form-beans>
+
+	<!-- Action Mappings -->
+	<action-mappings>
+
+    <!-- Start Action for phone -->
+    <action  path="/phone/StartPhone" 
+             type="com.vh.locker.action.inside.StartPhone">
+      <forward name="success" path="/modules/phone/jsp/startphone.jsp"/>
+		</action>
+
+    <!-- Dispatcher action for phone -->
+		<action  path="/phone/PhoneDispatcher" 
+             name="gridForm"
+            scope="request"
+             type="com.vh.locker.action.inside.PhoneDispatcher">
+		  <forward name="failure" path="/modules/phone/jsp/contacts.jsp"/>
+		</action>
+
+    <!-- Create/Update contact -->
+    <action  path="/phone/UpdateContact" 
+             name="contactForm"
+            scope="request"
+             type="com.vh.locker.action.inside.UpdateContact">
+      <forward name="success" path="/modules/phone/jsp/contacts.jsp"/>
+		</action>
+
+    <!-- Send SMS to contact -->
+    <action  path="/phone/SendSMS" 
+             name="smsForm"
+            scope="request"
+             type="com.vh.locker.action.inside.SendSMS">
+      <forward name="success" path="/modules/phone/jsp/contacts.jsp"/>
+		</action>
+
+    <!-- Delete contact -->
+    <action  path="/phone/DeleteContact" 
+             name="gridForm"
+            scope="request"
+             type="com.vh.locker.action.inside.DeleteContact">
+		  <forward name="success" path="/modules/phone/jsp/contacts.jsp"/>
+    </action>
+
+  </action-mappings>
+
+</struts-config>

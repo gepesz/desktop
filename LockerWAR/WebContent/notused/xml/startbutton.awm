@@ -1,0 +1,81 @@
+awm300
+"C:\Budapest\LockerWAR\WebContent\common\js"
+startbutton.js
+""
+""
+ 0 
+
+ 0 
+ 0 
+-1 
+
+[EndParams]
+[Menu Tree]
+ 0 
+!Main Menu!
+M0
+!!,1,0,1,3,2,3,0,5,1,0,0,4,n,3,1,Start Here,0,0,sans-serif,14px,1,0,0,#4C4C4C,#4C4C4C,none,2,n,#4C4C4C,n,outset,2,#C0C0C0,1,0,0,n,n,100,0,[awmEM]
+M0
+!Start!
+I1
+!Start!,!Start!,!Start!,1,1,1,C:\Budapest\LockerWAR\WebContent\common\img\starthere_small.gif,C:\Budapest\LockerWAR\WebContent\common\img\starthere_small.gif,C:\Budapest\LockerWAR\WebContent\common\img\starthere_small.gif,3,3,3,1,1,1,Start Here,1,0,0,0,sans-serif,sans-serif,sans-serif,14px,14px,14px,0,1,0,0,0,1,0,0,0,#EE9F1B,#EE9F1B,#EE9F1B,n,n,n,solid,solid,solid,0,1,1,#4C4C4C,#4C4C4C,#4C4C4C,#FFFFFF,#4C4C4C,#4C4C4C,n,n,n,!!,n,n,n,n,n,1,2,2,2,[awmEI]
+I1
+!!
+S8
+!!,2,1,-4,2,0,0,0,0,n,3,1,,0,0,sans-serif,14px,1,0,0,#FFFFFF,#4C4C4C,none,2,n,#4C4C4C,n,outset,2,#C0C0C0,1,0,0,n,n,70,[awmES]
+S8
+!Programs >>!
+I10
+!Programs >>!,!Programs >>!,!Programs >>!,1,1,1,C:\Budapest\LockerWAR\WebContent\common\img\desktop.gif,C:\Budapest\LockerWAR\WebContent\common\img\desktop.gif,C:\Budapest\LockerWAR\WebContent\common\img\desktop.gif,3,3,3,0,0,0,All Programs,1,0,0,0,sans-serif,sans-serif,sans-serif,14px,14px,14px,0,1,1,0,0,0,0,0,0,#FFFFFF,#4C4C4C,#4C4C4C,n,n,n,none,none,none,0,0,0,#4C4C4C,#4C4C4C,#4C4C4C,#4C4C4C,#EE9F1B,#EE9F1B,n,n,n,!!,n,n,n,n,n,1,2,2,2,[awmEI]
+I10
+!!
+S11
+!!,2,0,-4,2,0,0,0,0,n,3,1,,0,0,sans-serif,14px,1,0,0,#FFFFFF,#4C4C4C,none,2,n,#4C4C4C,n,outset,2,#C0C0C0,1,0,0,n,n,70,[awmES]
+S11
+!Email!
+I12
+!Email!,!Email!,!Email!,1,1,1,C:\Budapest\LockerWAR\WebContent\modules\email\img\email.gif,C:\Budapest\LockerWAR\WebContent\modules\email\img\email.gif,C:\Budapest\LockerWAR\WebContent\modules\email\img\email.gif,3,3,3,0,0,0,Email,1,0,0,0,sans-serif,sans-serif,sans-serif,14px,14px,14px,0,1,1,0,0,0,0,0,0,#FFFFFF,#4C4C4C,#4C4C4C,n,n,n,solid,solid,solid,1,1,1,#4C4C4C,#4C4C4C,#4C4C4C,#4C4C4C,#EE9F1B,#EE9F1B,n,n,n,!!,n,n,n,/vh/email/StartEmail.bg?c=content&c2=footer,contentFrame.bgFrame,1,2,2,2,[awmEI]
+S11
+!Music!
+I18
+!Music!,!Music!,!Music!,1,1,1,C:\Budapest\LockerWAR\WebContent\modules\music\img\kmix.gif,C:\Budapest\LockerWAR\WebContent\modules\music\img\kmix.gif,C:\Budapest\LockerWAR\WebContent\modules\music\img\kmix.gif,3,3,3,0,0,0,Music,1,0,0,0,sans-serif,sans-serif,sans-serif,14px,14px,14px,0,1,1,0,0,0,0,0,0,#FFFFFF,#4C4C4C,#4C4C4C,n,n,n,solid,solid,solid,1,1,1,#4C4C4C,#4C4C4C,#4C4C4C,#4C4C4C,#EE9F1B,#EE9F1B,n,n,n,!!,n,n,n,/vh/music/StartMusic.bg?c=content&c2=footer,contentFrame.bgFrame,1,2,2,2,[awmEI]
+S11
+!IM!
+I23
+!IM!,!IM!,!IM!,1,1,1,C:\Budapest\LockerWAR\WebContent\modules\im\img\kuser.gif,C:\Budapest\LockerWAR\WebContent\modules\im\img\kuser.gif,C:\Budapest\LockerWAR\WebContent\modules\im\img\kuser.gif,3,3,3,0,0,0,IM,1,0,0,0,sans-serif,sans-serif,sans-serif,14px,14px,14px,0,1,1,0,0,0,0,0,0,#FFFFFF,#4C4C4C,#4C4C4C,n,n,n,solid,solid,solid,1,1,1,#4C4C4C,#4C4C4C,#4C4C4C,#4C4C4C,#EE9F1B,#EE9F1B,n,n,n,!!,n,n,n,/vh/im/StartIM.bg?c=content&c2=footer,contentFrame.bgFrame,1,2,2,2,[awmEI]
+S11
+!HTML!
+I24
+!HTML!,!HTML!,!HTML!,1,1,1,C:\Budapest\LockerWAR\WebContent\modules\html\img\favorites.gif,C:\Budapest\LockerWAR\WebContent\modules\html\img\favorites.gif,C:\Budapest\LockerWAR\WebContent\modules\html\img\favorites.gif,3,3,3,0,0,0,HTML,1,0,0,0,sans-serif,sans-serif,sans-serif,14px,14px,14px,0,1,1,0,0,0,0,0,0,#FFFFFF,#4C4C4C,#4C4C4C,n,n,n,solid,solid,solid,1,1,1,#4C4C4C,#4C4C4C,#4C4C4C,#4C4C4C,#EE9F1B,#EE9F1B,n,n,n,!!,n,n,n,/vh/html/StartHTML.bg?c=content&c2=footer,contentFrame.bgFrame,1,2,2,2,[awmEI]
+S11
+!Photos!
+I25
+!Photos!,!Photos!,!Photos!,1,1,1,C:\Budapest\LockerWAR\WebContent\modules\photos\img\camera.gif,C:\Budapest\LockerWAR\WebContent\modules\photos\img\camera.gif,C:\Budapest\LockerWAR\WebContent\modules\photos\img\camera.gif,3,3,3,0,0,0,Photos,1,0,0,0,sans-serif,sans-serif,sans-serif,14px,14px,14px,0,1,1,0,0,0,0,0,0,#FFFFFF,#4C4C4C,#4C4C4C,n,n,n,solid,solid,solid,1,1,1,#4C4C4C,#4C4C4C,#4C4C4C,#4C4C4C,#EE9F1B,#EE9F1B,n,n,n,!!,n,n,n,/vh/photos/StartPhotos.bg?c=content&c2=footer,contentFrame.bgFrame,1,2,2,2,[awmEI]
+S11
+!Phone/SMS!
+I26
+!Phone/SMS!,!Phone/SMS!,!Phone/SMS!,1,1,1,C:\Budapest\LockerWAR\WebContent\modules\phone\img\sms_protocol.gif,C:\Budapest\LockerWAR\WebContent\modules\phone\img\sms_protocol.gif,C:\Budapest\LockerWAR\WebContent\modules\phone\img\sms_protocol.gif,3,3,3,0,0,0,Phone/SMS,1,0,0,0,sans-serif,sans-serif,sans-serif,14px,14px,14px,0,1,1,0,0,0,0,0,0,#FFFFFF,#4C4C4C,#4C4C4C,n,n,n,solid,solid,solid,1,1,1,#4C4C4C,#4C4C4C,#4C4C4C,#4C4C4C,#EE9F1B,#EE9F1B,n,n,n,!!,n,n,n,/vh/phone/StartPhone.bg?c=content&c2=footer,contentFrame.bgFrame,1,2,2,2,[awmEI]
+S11
+!Bills!
+I27
+!Bills!,!Bills!,!Bills!,1,1,1,C:\Budapest\LockerWAR\WebContent\modules\bills\img\kwallet.gif,C:\Budapest\LockerWAR\WebContent\modules\bills\img\kwallet.gif,C:\Budapest\LockerWAR\WebContent\modules\bills\img\kwallet.gif,3,3,3,0,0,0,Bills,1,0,0,0,sans-serif,sans-serif,sans-serif,14px,14px,14px,0,1,1,0,0,0,0,0,0,#FFFFFF,#4C4C4C,#4C4C4C,n,n,n,solid,solid,solid,1,1,1,#4C4C4C,#4C4C4C,#4C4C4C,#4C4C4C,#EE9F1B,#EE9F1B,n,n,n,!!,n,n,n,/vh/bills/StartBills.bg?c=content&c2=footer,contentFrame.bgFrame,1,2,2,2,[awmEI]
+S11
+!Notes!
+I28
+!Notes!,!Notes!,!Notes!,1,1,1,C:\Budapest\LockerWAR\WebContent\modules\notes\img\korganizer.gif,C:\Budapest\LockerWAR\WebContent\modules\notes\img\korganizer.gif,C:\Budapest\LockerWAR\WebContent\modules\notes\img\korganizer.gif,3,3,3,0,0,0,Notes,1,0,0,0,sans-serif,sans-serif,sans-serif,14px,14px,14px,0,1,1,0,0,0,0,0,0,#FFFFFF,#4C4C4C,#4C4C4C,n,n,n,solid,solid,solid,1,1,1,#4C4C4C,#4C4C4C,#4C4C4C,#4C4C4C,#EE9F1B,#EE9F1B,n,n,n,!!,n,n,n,/vh/notes/StartNotes.bg?c=content&c2=footer,contentFrame.bgFrame,1,2,2,2,[awmEI]
+S8
+!Documents!
+I16
+!Documents!,!Documents!,!Documents!,1,1,1,C:\Budapest\LockerWAR\WebContent\modules\files\img\folder.gif,C:\Budapest\LockerWAR\WebContent\modules\files\img\folder.gif,C:\Budapest\LockerWAR\WebContent\modules\files\img\folder.gif,3,3,3,0,0,0,Documents,1,0,0,0,sans-serif,sans-serif,sans-serif,14px,14px,14px,0,1,1,0,0,0,0,0,0,#FFFFFF,#4C4C4C,#4C4C4C,n,n,n,none,none,none,0,1,1,#4C4C4C,#4C4C4C,#4C4C4C,#4C4C4C,#EE9F1B,#EE9F1B,n,n,n,!!,n,n,n,/vh/files/StartFiles.bg?c=content&c2=footer,contentFrame.bgFrame,1,2,2,2,[awmEI]
+S8
+!Settings!
+I29
+!Settings!,!Settings!,!Settings!,1,1,1,C:\Budapest\LockerWAR\WebContent\common\img\settings.gif,C:\Budapest\LockerWAR\WebContent\common\img\settings.gif,C:\Budapest\LockerWAR\WebContent\common\img\settings.gif,3,3,3,0,0,0,Settings,1,0,0,0,sans-serif,sans-serif,sans-serif,14px,14px,14px,0,1,1,0,0,0,0,0,0,#FFFFFF,#4C4C4C,#4C4C4C,n,n,n,none,none,none,0,0,0,#4C4C4C,#4C4C4C,#4C4C4C,#4C4C4C,#EE9F1B,#EE9F1B,n,n,n,!!,n,n,n,/vh/common/ViewSettings.bg?c=content&c2=footer,contentFrame.bgFrame,1,2,2,2,[awmEI]
+S8
+!Help!
+I30
+!Help!,!Help!,!Help!,1,1,1,C:\Budapest\LockerWAR\WebContent\common\img\help.gif,C:\Budapest\LockerWAR\WebContent\common\img\help.gif,C:\Budapest\LockerWAR\WebContent\common\img\help.gif,3,3,3,0,0,0,Help,1,0,0,0,sans-serif,sans-serif,sans-serif,14px,14px,14px,0,1,1,0,0,0,0,0,0,#FFFFFF,#4C4C4C,#4C4C4C,n,n,n,none,none,none,0,0,0,#4C4C4C,#4C4C4C,#4C4C4C,#4C4C4C,#EE9F1B,#EE9F1B,n,n,n,!!,n,n,n,n,n,0,2,2,2,[awmEI]
+S8
+!Logout!
+I9
+!Logout!,!Logout!,!Logout!,1,1,1,C:\Budapest\LockerWAR\WebContent\common\img\logout.gif,C:\Budapest\LockerWAR\WebContent\common\img\logout.gif,C:\Budapest\LockerWAR\WebContent\common\img\logout.gif,3,3,3,0,0,0,Click to Logout,1,0,0,0,sans-serif,sans-serif,sans-serif,14px,14px,14px,0,1,1,0,0,0,0,0,0,#FFFFFF,#4C4C4C,#4C4C4C,n,n,n,none,none,none,0,0,0,#4C4C4C,#4C4C4C,#4C4C4C,#4C4C4C,#EE9F1B,#EE9F1B,n,n,n,!!,n,n,n,/vh/outside/Logout.do,n,1,2,2,2,[awmEI]

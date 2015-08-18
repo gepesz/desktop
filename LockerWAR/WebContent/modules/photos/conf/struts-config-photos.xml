@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<!-- Form Beans -->
+	<form-beans>
+	</form-beans>
+
+	<!-- Action Mappings -->
+	<action-mappings>
+
+		<!-- Start Action for photos -->
+		<action  path="/photos/StartPhotos" 
+             type="com.vh.locker.action.inside.StartPhotos">
+		  <forward name="success" path="/modules/photos/jsp/startphotos.jsp"/>
+		</action>
+
+		<!-- Dispatcher action for phone -->
+		<action  path="/photos/PhotosDispatcher" 
+             name="gridForm"
+            scope="request"
+             type="com.vh.locker.action.inside.PhotosDispatcher">
+		  <forward name="failure" path="/modules/phone/jsp/albums.jsp"/>
+		</action>
+
+		<!-- Start Action for Album photos -->
+		<action  path="/photos/ViewAlbumPhotos" 
+             type="com.vh.locker.action.inside.ViewAlbumPhotos">
+		  <forward name="failure" path="/photos/StartPhotos.bg?c=grid"/>
+		  <forward name="success" path="/modules/photos/jsp/albumphotos.jsp"/>
+    </action>
+
+	</action-mappings>
+
+</struts-config>

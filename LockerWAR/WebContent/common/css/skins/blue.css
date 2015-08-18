@@ -1,0 +1,286 @@
+
+a {
+	text-decoration:none;
+	color:#5C6CE2;
+	cursor:pointer;
+}
+
+.icontext {
+	cursor: default;
+	margin:5px;
+	font-family:verdana;
+	font-size:11px;
+	color: #5C6CE2;
+	background-color: #262279;
+}
+
+.footerhidebutton {
+	font-family:verdana;
+	font-size:10px;
+	color:#5C6CE2;
+	width:10px;
+	background-color: #333333;
+	border: 1px solid #5C6CE2;
+	text-align:center;
+	margin-left: 5px; /* controls how far is the clock from the hide button */
+}
+
+.clock {
+	cursor: default;
+	font-family:verdana;
+	font-size:11px;
+	color: #5C6CE2;
+	background-color: transparent; 
+	border: 0px solid red;
+	text-align:center;
+}
+
+.titlebar {
+	font-family:verdana;
+	font-size:13px;
+	font-weight:bold;
+	color: #999999;
+	background-color: #262279;
+	margin-left: 2px;
+	margin-right: 2px;
+	text-align:left;
+	border-bottom: 1px solid #999999;
+}
+
+.menu {
+	font-family:verdana;
+	font-size:12px;
+	font-weight:bold;
+	color: #262279;
+	background-color: #999999;
+	margin-left: 2px;
+	margin-right: 2px;
+	text-align:left;
+}
+
+.menu a:hover{  
+	color: #EE9F1B;
+	background-color: #262279;
+	border: 1px outset #262279;
+}
+
+.menu a:active{  
+	color: #EE9F1B;
+	background-color: #262279;
+	border: 1px outset #262279;
+}
+
+.toolbar {
+	color: black;
+	background-color: #999999;
+	margin-left: 2px;
+	margin-right: 2px;
+	text-align:left;
+	border-bottom: 1px solid #262279;
+	border-top: 1px solid #4C4C4C;
+}
+
+.toolbarover {
+	background-color: #5C6CE2;
+	margin-left: 2px;
+	margin-right: 2px;
+	text-align:left;
+	cursor:hand;
+	border-bottom: 1px solid #262279;
+	border-top: 1px solid #4C4C4C;
+}
+
+.toolbarout {
+	background-color: #999999;
+	margin-left: 2px;
+	margin-right: 2px;
+	text-align:left;
+	border-bottom: 1px solid #262279;
+	border-top: 1px solid #4C4C4C;
+}
+
+.listtitle {
+	font-family:verdana;
+	font-size:12px;
+	color: #262279;
+	background-color: #999999;
+	text-align:left;
+	border-bottom: 1px solid #262279;
+	margin:0px;
+	white-space: nowrap;
+}
+
+.listtitle a{ color: #262279; 
+}
+
+.list {
+	font-family:verdana;
+	font-size:10px;
+	color: #666666;
+	text-align:left;
+	border-bottom: 1px solid #262279;
+}
+
+.list a{ color: #262279; 
+}
+
+.trhighlight {
+	background-color: #5C6CE2;
+}
+
+.trnormal {
+	background-color: #CDDFFE;
+}
+
+.trodd {
+	background-color: #CDDFFE;
+}
+
+.treven {
+	background-color: #B0C4DE;
+}
+
+.field {
+	font-family:verdana;
+	font-size:11px;
+	color:#333333;
+	background: #B0C4DE;
+	text-align: left;
+}
+
+.fieldwait {
+	font-family:verdana;
+	font-size:11px;
+	color:#333333;
+	background: #B0C4DE;
+	text-align: center;
+	border-bottom: 1px solid white;
+}
+
+.itemin {
+	font-family:verdana;
+	font-size:11px;
+	font-weight:bold;
+	color:#3B517E;
+	background: #B0C4DE;
+	height: 25px;
+	text-align: right;
+	border-right-width: 1px;
+	border-right-style: dashed;
+	border-right-color: #B0C4DE;
+	filter:alpha(opacity=90);
+	-moz-opacity: .90;
+}
+
+.separatorin {
+	font-family:verdana;
+	font-size:13px;
+	color:#999999;
+	background: #262279;
+	border-bottom: 1px solid white;
+	border-top: 1px solid white;
+}
+
+.button {
+	font-family:verdana;
+	font-size:13px;
+	color:#333333;
+	background: #B0C4DE;
+	border: 1px solid #333333;
+	width: 120px;
+}
+
+.buttonin {
+	font-family:verdana;
+	font-size:11px;
+	color:#333333;
+	background: #B0C4DE;
+	border: 1px solid #333333;
+	width: 120px;
+}
+
+.topline {
+	background-color: #5C6CE2;
+}
+
+.toolbarline2 {
+	color: black;
+	background-color: #999999;
+	margin-left: 2px;
+	margin-right: 2px;
+	text-align:left;
+	border-bottom: 1px solid #262279;
+	border-top: 1px solid #4C4C4C;
+}
+
+.naveach {
+	background-color: #666666;
+	text-align:left;
+	font-size:12px;
+	color: #FFFFFF;
+	border-left: 1px solid #5C6CE2;
+	border-top: 1px solid #5C6CE2;
+	border-bottom: 1px solid #5C6CE2;
+}
+
+.navarea {
+	font-family:verdana;
+	background: #666666;
+	border-right: 1px solid #5C6CE2;
+	border-top: 1px solid #5C6CE2;
+	border-bottom: 1px solid #5C6CE2;
+}
+
+.navborder {
+	border-right: 1px solid #5C6CE2;
+	background: #000000;
+	text-align:left;
+	font-size:12px;
+}
+
+.footertaskinactive{
+	font-family:verdana;
+	font-size:11px;
+	color:#EE9F1B;
+	background-color: #262279; 
+	border: 1px solid #262279;
+    margin: 0px 1px 0px 0px;
+	cursor: pointer;
+	float: left;
+	width: 80px;
+}
+
+.footertaskactive {
+	font-family:verdana;
+	font-size:11px;
+	font-weight:bold;
+	color:#333333;
+	background-color: #5C6CE2;
+	border: 1px solid #838383;
+    margin: 0px 1px 0px 0px;
+    cursor: default;
+	float: left;
+	width: 80px;
+}
+
+.lassoOnCreate {
+	position: absolute;
+	font-size: 0%;
+	border: 1px solid #5C6CE2;
+	background-color: #262279;
+	filter:alpha(opacity=70);
+	-moz-opacity: .70;
+	z-Index: 2;
+}
+
+.shortcutTextarea {
+  cursor: default;
+  margin:0px;
+  font-family:verdana;
+  font-size:11px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid #262279;
+  background: #262279;
+  color: #5C6CE2;
+}

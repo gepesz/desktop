@@ -1,0 +1,391 @@
+/*==============================================
+This file controls the general appearance of Z-Interface.
+These are the common styles which do not get modified when the color schema changes.
+IMPORTANT: Modifying these classes impact ALL of the schemas throughout the whole application.
+===============================================*/
+
+body {
+	font-family:verdana;
+	font-size:12px;
+	color: #999999;
+	background-color: black;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	height:100%;
+	z-index:1;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+table {
+	font-family:verdana;
+	font-size:12px;
+	color: #999999;
+	border: 0px solid red;
+	margin-left: 0px;
+	margin-right: 0px;  
+	z-index:1; 
+}
+
+a:hover {
+	color: #EE9F1B;
+	text-decoration:none;
+}
+
+ul, ol{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	list-style: none;
+}
+
+.icon {
+	border: 0px solid black;
+	text-align:center;
+}
+
+.button {
+	font-family:verdana;
+	font-size:13px;
+	color:#333333;
+	background: #BACDE6;
+	border: 1px solid #333333;
+	width: 120px;
+}
+
+.date {
+	font-family:verdana;
+	font-size:14px;
+	color:#EE9F1B;
+	border: 0px solid red;
+	text-align:right;
+}
+
+.linkdir {
+	font-family:verdana;
+	font-size:12px;
+	color: white;
+	border: 0px solid red;
+	text-align:left;
+}
+
+.left {
+  background-color: black;
+  font-family:verdana;
+  font-size:12px;
+  color: white;
+  border: 0px solid red;
+  text-align:left;
+}
+
+.divider{
+  background-color: #EE9F1B;
+  height: 1px !important;
+  overflow: hidden;
+  margin: 5px;
+  clear: both;
+}
+	
+.header {
+	font-family:verdana;
+	font-size:11px;
+	color: #999999;
+}
+
+a.header {
+	font-family:verdana;
+	font-size:12px;
+	color:#EE9F1B;
+}
+
+.listtitle a:hover{ color: #EE9F1B; 
+}
+
+.list a:hover{ color: #EE9F1B; 
+}
+
+.textbox {
+	font-family:verdana;
+	font-size:11px;
+	color:#333333;
+	background: white;
+}
+
+.item {
+	font-family:verdana;
+	font-size:11px;
+	color: white;
+	background: #666666;
+	text-align: right;
+}
+
+.menu a{  
+	background-color: #999999;
+	border: 1px solid #999999;
+}
+
+.fieldarea {
+	font-family:verdana;
+	font-size:11px;
+	color:#666666;
+	background: white;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #666666;
+}
+
+.field a {color:#666666;}
+
+.field a:hover {color:#353FB8; font-weight: bold}
+
+.separator {
+	font-family:verdana;
+	font-size:13px;
+	color:#333333;
+	background: #999999;
+	border-bottom: 1px solid white;
+	border-top: 1px solid white;
+}
+
+.itemtext {
+	font-family:verdana;
+	font-size:11px;
+	color: white;
+	background: #838383;
+	border-bottom: 1px solid white;
+}
+
+.desktop {
+	filter:alpha(opacity=90);
+	-moz-opacity: .90;
+	display:block;
+	z-index:10;
+	position:absolute;
+}
+
+.desktopbg {
+	filter:alpha(opacity=70);
+	-moz-opacity: .70;
+	display:block;
+	z-index:0;
+	position:absolute;
+}
+
+.dragme {	
+	position:absolute;
+    filter:alpha(opacity=100);
+	-moz-opacity: 1.00;
+}
+
+.dragmeOnMove {
+    position:absolute;
+	filter:alpha(opacity=50);
+	-moz-opacity: .50;
+}
+
+.shortcutImage {
+  padding:0px 30px;
+}
+
+.toolbarline1 {
+	color: black;
+	background-color: #999999;
+	margin-left: 2px;
+	margin-right: 2px;
+	text-align:left;
+}
+
+.greyline {
+	background-color: #4C4C4C;
+}
+
+.navmain {
+	background-color: #000000;
+	text-align:left;
+	font-size:12px;
+}
+
+.navbutton {
+	font-family:verdana;
+	background: #666666;
+}
+
+.footer {
+	font-family:verdana;
+	font-size:10px;
+	color:#666666;
+	background-color: transparent; 
+	text-align:left;
+}
+
+.footerdivider {
+	background-color: transparent; 
+	text-align:left;
+	font-size:15px;
+	font-family:verdana;
+	color: #EE9F1B;
+	float: left;
+	margin: 0px 2px;
+}
+
+.setitem {
+	font-family:verdana;
+	font-size:11px;
+	font-weight: bold;
+	color: white;
+	border-right: 1px dotted white;
+	background: #666666;
+	text-align: right;
+}
+
+.setitemtxt {
+	font-family:verdana;
+	font-size:11px;
+	color: white;
+	background: #666666;
+}
+
+.setfield {
+	font-family:verdana;
+	font-size:11px;
+	color:#333333;
+	background: #666666;
+	text-align: left;
+}
+
+.footertask {
+	background-color: transparent; 
+	width: 80px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.asterisk {
+	font-family:verdana;
+	font-size:11px;
+	color:#CC0000;
+}
+
+.startList {
+	color:#FFFFFF; 
+	background-color:#4C4C4C; 
+	font-family:sans-serif; 
+	font-size:14px;
+	font-weight:bold;
+	border:1px solid #4C4C4C; 
+	left:0px
+	z-index:25;
+    position:absolute; 
+	display:none;
+}
+
+.startList li {
+	padding-left: 10px;
+	width: 135px;
+}
+
+.startList li.hover {
+	cursor: pointer;
+	width: 135px;
+	background-color:#EE9F1B;
+	color:#4C4C4C;
+	text-decoration:none;
+}
+
+.progList {
+	color:#FFFFFF; 
+	background-color:#4C4C4C; 
+	font-family:sans-serif; 
+	font-size:14px;
+	border:1px solid #4C4C4C;
+	position:absolute;
+	left:146px;
+	display:none;
+	z-index:25;
+    filter:alpha(opacity=90); 
+	-moz-opacity: .90;
+}
+
+.progList li {
+	padding-left: 10px;
+	width: 135px;
+}
+
+.progList li.hover {
+	cursor: pointer;
+	width: 135px;
+	background-color:#EE9F1B;
+	color:#4C4C4C;
+	text-decoration:none;
+}
+
+.startButton { 
+	position:absolute; 
+	bottom:2px; 
+	left:5px; 
+	border:2px solid #4C4C4C; 
+	color:#EE9F1B; 
+	background-color:transparent; 
+	font-family:sans-serif; 
+	font-size:14px; 
+	z-index:25;
+}
+
+.formFieldError {
+	font-weight: bold;
+	color: red;
+	display: block;
+}
+
+.appDiv {
+    position:absolute;
+	width:100%; 
+	top:0px;
+	left:0px; 
+	background-color:black; 
+	border: 0px solid black; 
+	z-index:1;
+}
+
+.defaultFooter {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: -1px;
+  background-color: #4C4C4C;
+  z-index: 2;
+}
+
+.defaultFooterText {
+  float:left;
+  font-weight:bold;
+}
+
+.hiddenFooter {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: -1px;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.shortcutRenameTextarea {
+  margin:0px;
+  font-family:verdana;
+  font-size:11px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid black;
+  background: white;
+  color: black;
+}

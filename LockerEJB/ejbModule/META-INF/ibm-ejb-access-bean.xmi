@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<accessbean:EJBShadow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:accessbean="accessbean.xmi" xmlns:ejb="ejb.xmi" xmi:id="EJBShadow_1060099908401" name="Budapest">
+  <enterpriseBean xmi:type="ejb:ContainerManagedEntity" href="META-INF/ejb-jar.xml#Budapest"/>
+</accessbean:EJBShadow>

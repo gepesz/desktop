@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<!-- Form Beans -->
+	<form-beans>
+	</form-beans>
+
+	<!-- Action Mappings -->
+	<action-mappings>
+
+		<!-- Start Action for bills -->		
+		<action  path="/bills/StartBills" 
+             type="com.vh.locker.action.inside.StartBills">
+		  <forward name="success" path="/modules/bills/jsp/billsmain.jsp"/>
+		</action>
+
+	</action-mappings>
+
+</struts-config>

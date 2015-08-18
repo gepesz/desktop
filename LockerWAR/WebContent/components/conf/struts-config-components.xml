@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<!-- Form Beans -->
+	<form-beans>
+		<form-bean name="pickerForm" type="com.vh.locker.bean.components.PickerForm" />	
+	</form-beans>
+
+	<!-- Action Mappings -->
+	<action-mappings>
+
+		<!-- Puts pickerForm into request -->		
+        <action  path="/components/picker/PreparePicker" 
+		         name="pickerForm"
+				scope="request"
+                 type="com.vh.locker.action.components.PreparePicker">
+		  <forward name="success" path="/components/jsp/pickerTemplate.jsp"/>
+		</action>
+
+		<!-- Picker search action -->
+        <action  path="/components/picker/PickerSearch" 
+		         name="pickerForm"
+				scope="request"
+                 type="com.vh.locker.action.components.PickerSearch">
+		  <forward name="success" path="/components/jsp/pickerTemplate.jsp"/>
+		</action>
+
+		<!-- JSLogger action for logging from Javascript -->		
+		<action  path="/components/logger/JSLogger" 
+                 type="com.vh.locker.action.components.JSLogger">		
+		  <forward name="success" path="/common/jsp/blank.jsp"/>
+		</action>
+
+	</action-mappings>
+
+</struts-config>

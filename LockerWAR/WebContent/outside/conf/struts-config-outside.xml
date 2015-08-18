@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<!-- Form Beans -->
+	<form-beans>
+
+		<form-bean name="loginForm"     type="com.vh.locker.bean.outside.LoginForm" />
+		<form-bean name="signupForm"    type="com.vh.locker.bean.outside.SignupForm" />
+		<form-bean name="forgotpwdForm" type="com.vh.locker.bean.outside.ForgotPwdForm" />
+
+	</form-beans>
+
+
+	<!-- Action Mappings -->
+	<action-mappings>
+
+		<!--**************** Start login/logout ****************-->
+		
+		<!-- Login Action used from login.jsp -->
+		<action	 path="/outside/Login"
+                 name="loginForm"
+                scope="request"
+                 type="com.vh.locker.action.outside.Login">
+		  <forward name="failure"  path="/outside/jsp/login.jsp"/>
+		  <forward name="success"  path="/json/PrepareJSONInsideAction.do"/>
+		</action>
+
+		<!-- Login2 Action used from logout.jsp -->
+		<action	 path="/outside/Login2"
+                 name="loginForm"
+                scope="request"
+                 type="com.vh.locker.action.outside.Login">
+		  <forward name="failure"  path="/outside/jsp/logout.jsp"/>
+		  <forward name="success"  path="/json/PrepareJSONInsideAction.do"/>
+		</action>
+		
+        <!-- Logout Action -->		
+        <action  path="/outside/Logout" 
+                 name="loginForm"
+                scope="request"
+                 type="com.vh.locker.action.outside.Logout">
+		  <forward name="success" path="/json/PrepareJSONAfterLogout.do"/>
+        </action>
+
+        <!-- SSODetect Action -->
+        <action  path="/outside/SSODetect" 
+                 type="com.vh.locker.action.outside.SSODetect">
+          <forward name="success" path="/json/PrepareJSONOutsideAction.do"/>
+        </action>
+
+
+		<!--**************** JSON actions ****************-->
+
+		<!-- PrepareJSONOutsideAction: puts the JSONBridge variable into session scope,
+		     and registers the outsideService in it -->
+        <action  path="/json/PrepareJSONOutsideAction"
+                 type="com.vh.locker.json.PrepareJSONOutsideAction">
+          <forward name="success" path="/index.jsp"/>
+        </action>
+
+		<!-- PrepareJSONAfterLogout: puts the JSONBridge variable into session scope,
+		     and registers the outsideService in it after the Logout action.
+			 The only difference between this and the PrepareJSONOutsideAction is
+			 the path of the success mapping. -->
+        <action  path="/json/PrepareJSONAfterLogout"
+                 type="com.vh.locker.json.PrepareJSONOutsideAction">
+          <forward name="success" path="/outside/jsp/logout.jsp"/>
+        </action>
+
+		<!-- PrepareJSONInsideAction: updates the JSONBridge variable in session scope
+		     by adding the userService into it -->
+        <action  path="/json/PrepareJSONInsideAction"
+                 type="com.vh.locker.json.PrepareJSONInsideAction">
+          <forward name="success" path="/common/jsp/desktop.jsp"/>
+        </action>
+
+
+		<!--**************** End JSON actions ************-->
+
+
+
+		<!--**************** End login/logout ****************-->
+		
+		
+		<!--**************** Start outside MAJOR actions ****************-->
+
+		<!-- ViewSignup Action for prepopulating menus in signup.jsp -->
+		<action	 path="/outside/ViewSignup" 
+                 name="signupForm"
+                scope="request"
+                 type="com.vh.locker.action.outside.ViewSignup">
+		  <forward name="success" path="/outside/jsp/signup.jsp"/>
+		</action>
+
+		<!-- Signup Action for signing up users -->
+		<action	 path="/outside/Signup" 
+                 name="signupForm"
+                scope="request"
+                 type="com.vh.locker.action.outside.Signup">
+		  <forward name="failure" path="/outside/ViewSignup.do"/>				   		   
+		  <forward name="success" path="/outside/Login.do"/>
+		</action>
+
+        <!-- JCaptcha render action for rendering captcha images -->
+        <action path="/outside/jcaptcha"
+                type="com.octo.captcha.module.struts.image.RenderImageCaptchaAction">
+        </action>
+
+		<!-- ForgotPassword Action for signing up users -->
+		<action	 path="/outside/ForgotPassword" 
+                 name="forgotpwdForm"
+                scope="request"
+                 type="com.vh.locker.action.outside.ForgotPassword">
+		  <forward name="failure" path="/outside/jsp/forgotpwd.jsp"/>
+		  <forward name="success" path="/outside/jsp/login.jsp"/>
+		</action>
+
+        <!-- CheckCookie Action -->
+		<action  path="/outside/CheckCookie"
+                 type="com.vh.locker.action.outside.CheckCookie">
+		  <forward name="noCookie"    path="/outside/ViewLocale.none"/>
+		  <forward name="cookieFound" path="/outside/jsp/login.jsp"/>
+        </action>
+
+		<!-- ViewLocale Action for prepopulating available languages in locale.jsp -->
+		<action	 path="/outside/ViewLocale" 
+                 type="com.vh.locker.action.outside.ViewLocale">
+		  <forward name="success"  path="/outside/jsp/locale.jsp"/>
+		</action>
+		
+		<!-- SelectLocale Action -->
+		<action	 path="/outside/SelectLocale" 
+                 type="com.vh.locker.action.outside.SelectLocale">
+		  <forward name="default" path="/outside/jsp/login.jsp"/>
+		</action>
+		
+		<!--**************** End outside MAJOR actions ****************-->
+
+
+		<!--**************** Start outside FORWARD actions ****************
+
+		<action	 path="/outside/ForwardForgotPwd" 
+                 name="localeForm"
+                scope="request"
+                 type="org.apache.struts.actions.ForwardAction"
+            parameter="/outside/jsp/forgotpwd.jsp"/>
+
+		    **************** End outside FORWARD actions ****************-->
+				
+	</action-mappings>
+
+	<!-- This plugin is needed to render jcaptcha images.
+	     It's used by the RenderImageCaptchaAction, which is the main
+		 image rendering action in jcaptcha. -->
+    <plug-in className="com.octo.captcha.module.struts.CaptchaServicePlugin"/>
+
+</struts-config>
